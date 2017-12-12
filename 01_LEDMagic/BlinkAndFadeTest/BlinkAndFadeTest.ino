@@ -26,8 +26,6 @@ void loop() {
     fade(i,totalwait);
   }
 
-  
-  
   */
 
 }
