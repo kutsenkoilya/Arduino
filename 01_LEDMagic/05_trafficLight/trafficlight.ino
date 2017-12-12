@@ -1,14 +1,14 @@
 
-//Светофор
-//4 Пин - Красный Диод
-//5 Пин - Жёлтый
-//6 Пин - Зеленый
+//Traffic light
+//Pin 4 - Red LED
+//Pin 5 - Yellow LED 
+//Pin 6 - Green LED
 
-//Последовательность загораний
-//1. Красный(4) горит 5 сек
-//2. Зеленый(6) горит 3 сек
-//3. Зеленый(6) моргает 3 раза
-//4. Жёлтый (5) горит 1 сек
+//Work sequence
+//1. Red(4)     works for 5 sec
+//2. Green(6)   works for 3 sec
+//3. Green(6)   blinking 3 times
+//4. Yellow (5) works for 1 sec
 
 void setup() {
   pinMode(6, OUTPUT);

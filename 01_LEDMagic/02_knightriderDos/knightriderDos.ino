@@ -1,9 +1,10 @@
-
 /*
-Knight Rider dos
-Два огонька движутся навстречу друг другу из разных концов диодной ленты
-В данной реализации порты от 0 до 12 подключены к диодам
-важно чтобы startPin был меньше endPin
+Knight Rider Dos
+Two flames are moving back and forth in mirror way in the LED strip.
+In this implementation LEDs are sequentially attached to digital pins 0 to 12
+Warning: startPin value must be smaller than endPin value (startPin < endPin)
+
+Program can be changed for any numer of LEDs, just change startPin and endPin
 */
 int startPin = 0;
 int endPin = 12
@@ -16,7 +17,6 @@ void setup() {
   }
 }
 
-// the loop function runs over and over again forever
 void loop() {
   
   digitalWrite(pointer+startPin,HIGH);  

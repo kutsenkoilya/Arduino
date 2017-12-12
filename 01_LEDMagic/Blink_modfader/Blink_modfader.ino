@@ -1,37 +1,34 @@
 
-// the setup function runs once when you press reset or power the board
 void setup() {
-  pinMode(0, OUTPUT);
-  
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(4, OUTPUT);
 }
 
-// the loop function runs over and over again forever
 void loop() {
-  
-  int totalwait = 10;
 
-  shineup(0,totalwait);
-  fade(0,totalwait);
-  delay(100);
-  /*
-  
+  int totalwait = 2;
 
-  for (int i=5;i<14;i++)
+  for (int i=4;i<14;i++)
   {
     shineup(i,totalwait);
   }
 
   delay(1000);
 
-  for (int i=13;i>4;i--)
+  for (int i=13;i>3;i--)
   {
     fade(i,totalwait);
   }
 
-  
-  
-  */
-
+  delay(1000);
 }
 
 
@@ -57,10 +54,8 @@ void fade(int portnum, int delayt)
   {
     analogWrite(portnum,i);
     delay(delayt);  
-  }  
-  
-  
-  }
+  }    
+}
 
 
 

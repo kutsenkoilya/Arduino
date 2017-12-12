@@ -1,5 +1,7 @@
+/*
+  Fade Running Flame
+*/
 
-// the setup function runs once when you press reset or power the board
 void setup() {
   pinMode(13, OUTPUT);
   pinMode(12, OUTPUT);
@@ -13,32 +15,26 @@ void setup() {
   pinMode(4, OUTPUT);
 }
 
-// the loop function runs over and over again forever
 void loop() {
-
-  int totalwait = 2;
+ 
+  int totalwait = 1;
 
   for (int i=4;i<14;i++)
   {
-    ignite(i,i+1,totalwait);
+    tripleignite(i-1,i,i+1,totalwait);
   }
 
-  delay(1000);
-
-  for (int i=13;i>3;i--)
+  for (int i=14;i>3;i--)
   {
-    ignite(i,i-1,totalwait);
+    tripleignite(i+1,i,i-1,totalwait);
   }
-
-  delay(1000);
   
 }
-
 
 void blink(int portnum, int delayt)
 {
   digitalWrite(portnum, HIGH);
-  delay(delayt);                       // wait for a second
+  delay(delayt);
   digitalWrite(portnum, LOW);
 }
 
@@ -64,11 +60,24 @@ void ignite(int fadingport, int shiningport, int delayt)
 {
   for (int i=255; i>1; i--)
   {
-    analogWrite(fadingport,255-i);
-    analogWrite(shiningport,i);
+    analogWrite(fadingport,i);
+    analogWrite(shiningport,255-i);
     delay(delayt);  
   }     
 }
+
+void tripleignite(int leftport, int middleport, int rightport, int delayt)
+{
+  for (int i=0; i<255; i++)
+  {
+    analogWrite(leftport,255-i);
+    analogWrite(middleport,i);
+    analogWrite(rightport,255-i);
+    delay(delayt);  
+  }
+    
+}
+
 
 
 

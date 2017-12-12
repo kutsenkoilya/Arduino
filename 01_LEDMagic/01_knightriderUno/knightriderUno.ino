@@ -1,10 +1,12 @@
 /*
-Knight Rider uno
-Огонек движется из из крайнего левого угла в праввый (и обратно)
-по диодной ленте
-В данной реализации порты от 0 до 12 подключены к диодам
-важно чтобы startPin был меньше endPin
+Knight Rider Uno
+Flame is 'running' from leftmost LED to rightmost, back and forth in LED strip
+In this implementation LEDs are sequentially attached to digital pins 0 to 12
+Warning: startPin value must be smaller than endPin value (startPin < endPin)
+
+Program can be changed for any numer of LEDs, just change startPin and endPin
 */
+
 int startPin = 0;
 int endPin = 12;
 bool isReversed = false;
