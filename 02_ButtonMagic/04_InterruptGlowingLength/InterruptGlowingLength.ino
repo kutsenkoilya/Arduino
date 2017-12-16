@@ -1,15 +1,15 @@
 /*
-  Использует Interrupt
+  Implmentation is using interrupt
 
-  Зажимаешь кнопку, 
-  оценивает сколько кнопка была нажата и
-  потом диод мигает с такой же частотой
+  When button is pressed,
+  code is counting how many seconds button was pressed
+  after button release - LED is blinking with same time period
 
-  Пример:
-  1. зажали на 1 секунде
-  2. диод горит 1 секунду
-  3. диод не горит 1 сек
-  4. пункт 2
+  Example:
+  1. button was pressed for 1 sec
+  2. LED is ON for 1 sec
+  3. LED is OFF for 1 sec
+  4. пункт 2back to item 2
 
 */
 

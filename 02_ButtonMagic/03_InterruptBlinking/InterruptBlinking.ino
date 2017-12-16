@@ -1,5 +1,5 @@
 /*
- Если кнопка нажата - диод мигает
+If button is pressed - LED is blinking
 */
 
 #define LEDPin 12

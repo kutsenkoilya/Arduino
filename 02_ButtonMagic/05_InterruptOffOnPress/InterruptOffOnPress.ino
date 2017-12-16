@@ -1,8 +1,9 @@
 /*
-  Использует Interrupt
-
-  Быстрое нажатие - всегда включает
-  Медленное нажатие - всегда выключает
+  Implmentation is using interrupt
+  
+  Button fast-released - LED is turning ON, always
+  Button slow-released - LED is turning OFF, always
+  
 */
 
 #define LEDPin 12
