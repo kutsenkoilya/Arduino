@@ -1,13 +1,15 @@
 
 /*
-Knight Rider dos
-Два огонька движутся навстречу друг другу из разных концов диодной ленты
-В данной реализации порты от 0 до 12 подключены к диодам
-важно чтобы startPin был меньше endPin
+Knight Rider dos with potentiometer
+LED strip where two opposide LEDs are shining, their location depends on potentiometer value.
+In this implementation LEDs are attached to pins 0 to 13
+Warning: startPin < endPin
+Potentiometer is attached to A0
+
 */
 #define PotenPin A0
 int startPin = 0;
-int endPin = 10;
+int endPin = 13;
 int pointer=1;
 
 void setup() {

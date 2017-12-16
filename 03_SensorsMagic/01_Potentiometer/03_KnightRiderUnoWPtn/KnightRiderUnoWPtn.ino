@@ -1,13 +1,14 @@
 /*
 Knight Rider uno with potentiometer
-Диодная лента, в котором положение светящегося огонька определяется потенциометром
-В данной реализации порты от 0 до 12 подключены к диодам
-важно чтобы startPin был меньше endPin
-Потециометр воткнут в A0
+LED strip where one LED is shining, its location depends on potentiometer value.
+In this implementation LEDs are attached to pins 0 to 13
+Warning: startPin < endPin
+Potentiometer is attached to A0
+
 */
 #define PotenPin A0
 int startPin = 0;
-int endPin = 10;
+int endPin = 13;
 bool isReversed = false;
 int pointer;
 
@@ -21,7 +22,7 @@ void setup() {
 }
 
 void loop() {
-    pointer = analogRead(PotenPin) * 10 / 1023;
+    pointer = analogRead(PotenPin) * 14 / 1023;
     //эту красоту тоже надо потестить
     for (int i=startPin;i<=endPin;i++)
     { 
